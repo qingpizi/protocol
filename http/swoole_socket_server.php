@@ -14,13 +14,13 @@ run(function (){
 
         $connection = $socket->accept();
 
-        $request = $connection->recv();
+        $response = $connection->recv();
 
         $content = "HTTP/1.1 200 OK\r\nContent-Type: text/plain; charset=utf-8\r\nServer: swoole-http-server\r\n\r\nHello World\n";
 
         $connection->send($content);
         $connection->close();
-        var_dump($request);
+        var_dump($response);
     }
 
 
