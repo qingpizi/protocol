@@ -3,6 +3,7 @@
 use Swoole\Coroutine\Socket;
 use function Swoole\Coroutine\run;
 
+
 run(function() {
     $socket = new Socket(AF_INET, SOCK_STREAM);
     $retval = $socket->connect('127.0.0.1', 9501);
